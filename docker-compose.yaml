@@ -18,9 +18,22 @@ services:
       - "443:443/tcp"
       - "443:443/udp"
 
+  database:
+    image: postgres:16.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DATABASE_DB:-app}
+      POSTGRES_USER: ${DATABASE_USER:-postgres}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-password}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - internal
+  
 networks:
   internal:
 
 volumes:
   caddy_data:
   caddy_config:
+  db_data:

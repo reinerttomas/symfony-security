@@ -1,0 +1,22 @@
+parameters:
+    level: max
+    paths:
+        - bin/
+        - config/
+        - public/
+        - src/
+        - tests/
+
+    # https://phpstan.org/config-reference#vague-typehints
+#    checkMissingIterableValueType: false
+
+    symfony:
+        containerXmlPath: var/cache/test/App_KernelTestDebugContainer.xml
+    doctrine:
+        objectManagerLoader: tests/phpstan/object-manager.php
+    scanDirectories:
+        - var/cache/test/Symfony/Config
+
+    # @see https://phpstan.org/user-guide/stub-files
+    stubFiles:
+        - tests/phpstan/stubs/Doctrine/AbstractQuery.stub
