@@ -18,3 +18,10 @@ services:
   database:
     ports:
       - "5432:5432"
+
+  adminer:
+    image: dockette/adminer:dg
+    networks:
+      - internal
+    ports:
+      - 8000:80
