@@ -14,8 +14,8 @@ services:
     networks:
       - internal
     ports:
-      - "80:80/tcp"
-      - "443:443/tcp"
+      - "80:80"
+      - "443:443"
       - "443:443/udp"
 
   database:
