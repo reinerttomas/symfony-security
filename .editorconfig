@@ -44,7 +44,7 @@ indent_style = tab
 indent_style = space
 indent_size = 4
 
-[composer.json]
+[{composer,pint}.json]
 indent_size = 4
 
 [{,docker-}compose{,.*}.{yaml,yml}]

@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./assets/**/*.js",
-    "./templates/**/*.html.twig",
-    "./node_modules/flowbite/**/*.js"
-  ],
+  content: ['./assets/**/*.js', './templates/**/*.html.twig'],
   theme: {
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin')
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('daisyui'),
   ],
-}
-
+};
