@@ -2,13 +2,8 @@
 import './styles/app.css';
 
 // Recommended way, to include only the icons you need.
-import { createIcons, Activity, LogOut } from 'lucide';
 
-createIcons({
-  icons: {
-    Activity,
-    LogOut,
-  },
-});
+// enable the interactive UI components from Flowbite
+import 'flowbite';
 
 console.log('Happy coding!!');
